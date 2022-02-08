@@ -24,9 +24,13 @@ const age = prompt("write your age");
 
 function drinkage() {
   if (age < 18) {
-    ("you can`t drink");
+    return "you can`t drink";
   } else {
-    ("you can drink");
+    return "you can drink";
   }
 }
-drinkage(age);
+
+const title = document.getElementById("title");
+
+title.innerText = drinkage(age);
+console.log(title);
