@@ -19,3 +19,14 @@ calaulration.add(a, b);
 calaulration.minus(a, b);
 calaulration.mul(a, b);
 calaulration.div(a, b);
+
+const age = prompt("write your age");
+
+function drinkage() {
+  if (age < 18) {
+    ("you can`t drink");
+  } else {
+    ("you can drink");
+  }
+}
+drinkage(age);
