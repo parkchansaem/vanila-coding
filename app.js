@@ -1,38 +1,34 @@
-const calaulration = {
-  add: function add(a, b) {
-    console.log(a + b);
+const h1 = document.querySelector("#title h1");
+console.dir(h1);
+
+const superEventHandler = {
+  click: function clickEvent() {
+    h1.style.color = "blue";
   },
-  minus: function minus(a, b) {
-    console.log(a - b);
+  enter: function mouseEnter() {
+    h1.innerText = "the mouse is here!";
+    h1.style.color = "red";
   },
-  mul: function mul(a, b) {
-    console.log(a * b);
+  enter: function mouseEnter() {
+    h1.innerText = "the mouse is here!";
+    h1.style.color = "red";
   },
-  div: function div(a, b) {
-    console.log(a / b);
+  leave: function mouseLeave() {
+    h1.innerText = "the mouse is gone";
+    h1.style.color = "skyblue";
+  },
+  resize: function handleResize() {
+    h1.innerText = "you just resized";
+    h1.style.color = "yellow";
+  },
+  rightclick: function windowContext() {
+    h1.innerText = "that was a right click";
+    h1.style.color = "green";
   },
 };
 
-const a = 10;
-const b = 5;
-calaulration.add(a, b);
-calaulration.minus(a, b);
-calaulration.mul(a, b);
-calaulration.div(a, b);
-
-const age = prompt("write your age");
-
-/* function drinkage() {
-  if (age < 18) {
-    return "you can`t drink";
-  } else {
-    return "you can drink";
-  }
-} */
-
-const title = document.querySelector("#title");
-
-/* title.innerText = drinkage(age); */
-function clickEvent() {
-  title.style.color = "blue";
-}
+h1.addEventListener("click", superEventHandler.click);
+h1.addEventListener("mouseenter", superEventHandler.enter);
+h1.addEventListener("mouseleave", superEventHandler.leave);
+window.addEventListener("resize", superEventHandler.resize);
+window.addEventListener("contextmenu", superEventHandler.rightclick);
