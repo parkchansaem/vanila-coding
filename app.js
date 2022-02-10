@@ -22,15 +22,17 @@ calaulration.div(a, b);
 
 const age = prompt("write your age");
 
-function drinkage() {
+/* function drinkage() {
   if (age < 18) {
     return "you can`t drink";
   } else {
     return "you can drink";
   }
+} */
+
+const title = document.querySelector("#title");
+
+/* title.innerText = drinkage(age); */
+function clickEvent() {
+  title.style.color = "blue";
 }
-
-const title = document.getElementById("title");
-
-title.innerText = drinkage(age);
-console.log(title);
