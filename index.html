@@ -8,21 +8,30 @@
     <title>moment</title>
   </head>
   <body src="css/styles.css">
-    <h2 id="clock">00:00</h2>
-    <form class="hidden" id="login">
-      <input required maxlength="15" type="text" placeholder="write" />
-      <button>click</button>
-    </form>
-    <h1 id="textuser" class="hidden"></h1>
-    <form id="todo-form">
-      <input required maxlength="15" type="text" placeholder="write" />
-      <button>click</button>
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <h2></h2>
-      <h2></h2>
+    <div class="wrapper">
+      <div id="clock_weather">
+        <h2 id="clock">00:00</h2>
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <form class="hidden" id="login">
+        <input required maxlength="15" type="text" placeholder="write" />
+        <button>click</button>
+      </form>
+      <h1 id="textuser" class="hidden"></h1>
+      <form id="todo-form">
+        <input required maxlength="15" type="text" placeholder="write" />
+        <button>click</button>
+      </form>
+      <ul id="todo-list"></ul>
+      <div id="quote">
+        <h2></h2>
+        <h2></h2>
+      </div>
     </div>
+    <script src="js/weather.js"></script>
     <script src="js/todolist.js"></script>
     <script src="js/background.js"></script>
     <script src="js/app.js"></script>

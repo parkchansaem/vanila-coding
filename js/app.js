@@ -11,7 +11,7 @@ function handlesubmit(info) {
 }
 function userdisplay() {
   const userinfo = localStorage.getItem("username");
-  textuser.innerText = `hello${userinfo}`;
+  textuser.innerText = `hello ${userinfo}`;
   textuser.classList.remove("hidden");
 }
 const saveuserinfo = localStorage.getItem("username");

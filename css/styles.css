@@ -1,9 +1,21 @@
 body {
   background-color: antiquewhite;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .hidden {
   display: none;
 }
+#clock_weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #bgimg {
   display: flex;
   justify-content: center;
