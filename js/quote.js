@@ -54,3 +54,4 @@ const author = document.querySelector("#quote h2:last-child");
 const number = quotes[Math.floor(Math.random() * quotes.length)];
 quote.innerText = number.quote;
 author.innerText = number.author;
+author.style.color = "gray";

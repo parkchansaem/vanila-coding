@@ -20,6 +20,8 @@ function paintTodo(todo) {
   const li = document.createElement("li");
   li.id = todo.id;
   const span = document.createElement("span");
+  span.style.fontSize = "20px";
+  span.style.fontWeight = "500";
   const button = document.createElement("button");
   button.innerText = "x";
   li.appendChild(span);
@@ -27,7 +29,7 @@ function paintTodo(todo) {
   button.addEventListener("click", deletetodo);
   span.innerText = todo.text;
   console.log(li);
-  todoform.appendChild(li);
+  todolist.appendChild(li);
 }
 
 function handletodosubmit(info) {
