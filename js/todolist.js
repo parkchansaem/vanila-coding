@@ -28,6 +28,7 @@ function paintTodo(todo) {
   li.appendChild(button);
   button.addEventListener("click", deletetodo);
   span.innerText = todo.text;
+  li.id = "todolistWord";
   console.log(li);
   todolist.appendChild(li);
 }
