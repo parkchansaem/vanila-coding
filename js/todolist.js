@@ -24,6 +24,7 @@ function paintTodo(todo) {
   span.style.fontWeight = "500";
   const button = document.createElement("button");
   button.innerText = "x";
+  button.style.borderRadius = "3px";
   li.appendChild(span);
   li.appendChild(button);
   button.addEventListener("click", deletetodo);
