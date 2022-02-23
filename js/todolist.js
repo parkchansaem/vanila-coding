@@ -22,14 +22,10 @@ function paintTodo(todo) {
   const span = document.createElement("span");
   span.style.fontSize = "20px";
   span.style.fontWeight = "500";
-  const button = document.createElement("button");
-  button.innerText = "x";
-  button.style.borderRadius = "3px";
   li.appendChild(span);
-  li.appendChild(button);
-  button.addEventListener("click", deletetodo);
+  span.addEventListener("click", deletetodo);
+  li.className = "todolistWord";
   span.innerText = todo.text;
-  li.id = "todolistWord";
   console.log(li);
   todolist.appendChild(li);
 }
