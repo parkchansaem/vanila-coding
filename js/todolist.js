@@ -16,17 +16,30 @@ function deletetodo(event) {
   savevalue();
 }
 
+function clearclick(event) {
+  const li = event.target.parentElement;
+  const button = li.children[1];
+  const span = li.children[0];
+  span.style.textDecoration = "line-through";
+  button.classList.remove("hidden");
+}
+
 function paintTodo(todo) {
   const li = document.createElement("li");
   li.id = todo.id;
   const span = document.createElement("span");
+  const button = document.createElement("button");
+  button.innerText = "X";
   span.style.fontSize = "20px";
+  span.style.paddingRight = "10px";
   span.style.fontWeight = "500";
   li.appendChild(span);
-  span.addEventListener("click", deletetodo);
+  li.appendChild(button);
+  button.classList.add("hidden");
+  span.addEventListener("click", clearclick);
+  button.addEventListener("click", deletetodo);
   li.className = "todolistWord";
   span.innerText = todo.text;
-  console.log(li);
   todolist.appendChild(li);
 }
 
