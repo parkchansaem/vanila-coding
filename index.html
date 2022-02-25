@@ -11,7 +11,6 @@
     <div class="wrapper">
       <div id="clock_weather">
         <div class="clockDiv"><h2 id="clock">00:00</h2></div>
-
         <div id="weather">
           <span></span>
           <span></span>
@@ -22,11 +21,16 @@
         <button>click</button>
       </form>
       <h1 id="textuser" class="hidden"></h1>
-      <form id="todo-form">
-        <input required maxlength="15" type="text" placeholder="write" />
-        <button>click</button>
-      </form>
-      <div id="todo-list"></div>
+      <div class="todo-page">
+        <div id="todolist-title">Todo List</div>
+        <div id="todo-list"></div>
+        <form id="todo-form">
+          <div>ADD</div>
+          <input required maxlength="15" type="text" placeholder="write" />
+          <button>click</button>
+        </form>
+      </div>
+
       <div id="quote">
         <h2></h2>
         <h2></h2>

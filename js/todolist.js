@@ -30,15 +30,14 @@ function paintTodo(todo) {
   const span = document.createElement("span");
   const button = document.createElement("button");
   button.innerText = "X";
-  span.style.fontSize = "20px";
-  span.style.paddingRight = "10px";
-  span.style.fontWeight = "500";
+  span.className = "todo-text";
+  button.className = "todo-delete-button";
   li.appendChild(span);
   li.appendChild(button);
   button.classList.add("hidden");
+  li.className = "todolistWord";
   span.addEventListener("click", clearclick);
   button.addEventListener("click", deletetodo);
-  li.className = "todolistWord";
   span.innerText = todo.text;
   todolist.appendChild(li);
 }

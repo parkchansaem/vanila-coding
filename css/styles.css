@@ -31,12 +31,9 @@ body {
   opacity: 0.8;
 }
 #clock {
-  font-size: 120px;
+  font-size: 60px;
 }
-.clockDiv {
-  display: block;
-  height: 300px;
-}
+
 #weather {
   position: absolute;
   right: 0;
@@ -44,20 +41,40 @@ body {
   font-weight: 600;
   font-size: 20px;
 }
-#textuser {
+#textuser,
+.clockDiv {
   position: absolute;
   left: 15px;
   top: 0;
 }
-#todo-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
-  gap: 30px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin-top: 10px;
+.todo-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f9df9d;
+  width: 300px;
+  height: 500px;
+  margin-top: 100px;
 }
+#todolist-title {
+  padding-left: 20px;
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 30px;
+}
+.todo-text {
+  font-size: "20px";
+  padding-right: "10px";
+  font-weight: "500";
+}
+#todo-list {
+  display: display;
+  padding-top: 10px;
+  border-top: 3px solid rgba(0, 0, 0, 1);
+  margin: 20px;
+  margin-top: 0;
+}
+
 #quote {
   position: absolute;
   bottom: 0;
@@ -65,7 +82,47 @@ body {
   display: flex;
   gap: 30px;
 }
+.todo-delete-button {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  background-color: #f9df9d;
+  border: none;
+  padding: 10px;
+  color: red;
+  font-weight: 600;
+}
+.todolistWord {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding: 10px;
+  margin-bottom: 10px;
+}
 .todolistWord:hover {
   border-radius: 5px;
   color: aliceblue;
+  border-color: aliceblue;
+}
+#todo-form {
+  position: absolute;
+
+  bottom: 20px;
+
+  padding: 10px;
+}
+#todo-form div {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#todo-form input {
+  background-color: #f9df9d;
+  width: 200px;
+  height: 40px;
+  margin-left: 10px;
+}
+#todo-form button {
+  width: 50px;
+  height: 45px;
 }
