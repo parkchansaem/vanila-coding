@@ -11,17 +11,25 @@ function savevalue() {
 function deletetodo(event) {
   const li = event.target.parentElement;
   console.log(li.id);
-  li.remove();
+  li.classList.add("deleteA");
+  setTimeout(() => {
+    li.remove();
+  }, "1000");
   todos = todos.filter((todo) => todo.id !== parseInt(li.id));
   savevalue();
 }
 
 function clearclick(event) {
-  const li = event.target.parentElement;
+  const li = event.target;
   const button = li.children[1];
   const span = li.children[0];
   span.style.textDecoration = "line-through";
   button.classList.remove("hidden");
+}
+function liclick(event) {
+  const li = event.target.parentElement;
+  li.children[1].classList.remove("hidden");
+  li.children[0].style.textDecoration = "line-through";
 }
 
 function paintTodo(todo) {
@@ -36,7 +44,8 @@ function paintTodo(todo) {
   li.appendChild(button);
   button.classList.add("hidden");
   li.className = "todolistWord";
-  span.addEventListener("click", clearclick);
+  span.addEventListener("click", liclick);
+  li.addEventListener("click", clearclick);
   button.addEventListener("click", deletetodo);
   span.innerText = todo.text;
   todolist.appendChild(li);
