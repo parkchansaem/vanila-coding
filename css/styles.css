@@ -125,11 +125,12 @@ body {
   margin-left: 10px;
 }
 #todo-form button {
+  background-color: #f9df9d;
   width: 50px;
   height: 45px;
 }
 .deleteA {
-  animation: goAway 1.5s ease-in-out;
+  animation: goAway 1s ease-in-out;
 }
 @keyframes goAway {
   from {
@@ -138,7 +139,7 @@ body {
   }
   to {
     opacity: 0;
-    transform: translateX(30px) translateY(-30px);
+    transform: translateX(30px) translateY(-30px) rotateX(-90deg);
   }
 }
 @keyframes income {
