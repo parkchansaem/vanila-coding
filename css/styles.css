@@ -10,6 +10,22 @@ body {
 .hidden {
   display: none;
 }
+#calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+#date {
+  font-size: 170px;
+  padding-right: 20px;
+}
+.column {
+  display: felx;
+  flex-direction: column;
+  font-size: 60px;
+  font-weight: 400;
+}
 #clock_weather {
   display: flex;
   align-items: center;
@@ -33,7 +49,12 @@ body {
 #clock {
   font-size: 60px;
 }
-
+#calendar {
+  display: flex;
+  position: absolute;
+  left: 15px;
+  top: 50px;
+}
 #weather {
   position: absolute;
   right: 0;
@@ -41,11 +62,15 @@ body {
   font-weight: 600;
   font-size: 20px;
 }
-#textuser,
-.clockDiv {
+#textuser {
   position: absolute;
   left: 15px;
   top: 0;
+}
+.clockDiv {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
 }
 .todo-page {
   display: flex;
