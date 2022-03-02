@@ -1,5 +1,7 @@
 body {
   background-color: antiquewhite;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 .wrapper {
   display: flex;
@@ -9,6 +11,30 @@ body {
 }
 .hidden {
   display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1600px;
+  height: 750px;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 10;
+}
+.overlay-text {
+  color: white;
+  margin-top: 200px;
+  margin-left: 450px;
+  font-size: 70px;
+}
+#login {
+  margin-left: 600px;
+  z-index: 99;
+}
+#login input {
+  width: 300px;
+  height: 40px;
+  font-size: 35px;
 }
 #calendar {
   display: flex;
@@ -24,7 +50,7 @@ body {
   display: felx;
   flex-direction: column;
   font-size: 60px;
-  font-weight: 400;
+  font-weight: 00;
 }
 #clock_weather {
   display: flex;
@@ -64,8 +90,9 @@ body {
 }
 #textuser {
   position: absolute;
-  left: 15px;
-  top: 0;
+  right: 30px;
+  bottom: 150px;
+  font-size: 50px;
 }
 .clockDiv {
   position: absolute;

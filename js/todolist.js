@@ -37,7 +37,7 @@ function paintTodo(todo) {
   li.id = todo.id;
   const span = document.createElement("span");
   const button = document.createElement("button");
-  button.innerText = "X";
+  button.innerText = "❌";
   span.className = "todo-text";
   button.className = "todo-delete-button";
   li.appendChild(span);
