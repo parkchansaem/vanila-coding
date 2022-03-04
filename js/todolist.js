@@ -1,11 +1,22 @@
 const todoform = document.querySelector("#todo-form");
 const todolist = document.querySelector("#todo-list");
 const todoinput = document.querySelector("#todo-form input");
-
+const valueform = document.querySelector("#search-date");
+const valueinput = document.querySelector("#search-date input");
 let todos = [];
 
+const data = new Date();
+function getTodayDate() {
+  const month = String(data.getMonth() + 1).padStart(2, "0");
+  const date = String(data.getDate()).padStart(2, "0");
+  const getdate = month + "-" + date;
+  console.log(getdate);
+  return getdate;
+}
+valueinput.value = getTodayDate();
+
 function savevalue() {
-  localStorage.setItem("todos", JSON.stringify(todos));
+  localStorage.setItem(valueinput.value, JSON.stringify(todos));
 }
 
 function deletetodo(event) {
@@ -60,9 +71,22 @@ function handletodosubmit(info) {
   paintTodo(todoobj);
   savevalue();
 }
+function handleValuesubmit(info) {
+  info.preventDefault();
+  const dateValue = valueinput.value;
+  const inputvalue = localStorage.getItem(dateValue);
+  const parseValue = JSON.parse(inputvalue);
+  while (todolist.hasChildNodes()) {
+    todolist.removeChild(todolist.firstChild);
+  }
+  parseValue.forEach(paintTodo);
+  todos = parseValue;
+}
 
+valueform.addEventListener("submit", handleValuesubmit);
 todoform.addEventListener("submit", handletodosubmit);
-const savedvalue = localStorage.getItem("todos");
+const savedvalue = localStorage.getItem(valueinput.value);
+
 if (savedvalue !== null) {
   const parseValue = JSON.parse(savedvalue);
   parseValue.forEach(paintTodo);

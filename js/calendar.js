@@ -23,7 +23,7 @@ function calenderNow() {
   month.innerText = `${dataMonth}`;
   const dateDay = WEEKDAY[now.getDay()];
   day.innerText = `${dateDay}`;
-  console.log(day);
+  date.innerText = `${now.getDate()}`;
 }
 calenderNow();
 setInterval(calenderNow, 1000);

@@ -7,5 +7,4 @@ console.log(choseimg);
 const bgimg = document.createElement("img");
 bgimg.src = `img/${choseimg}`;
 bgimg.id = "bgimg";
-console.log(bgimg);
-document.body.appendChild(bgimg);
+/* document.body.appendChild(bgimg); */

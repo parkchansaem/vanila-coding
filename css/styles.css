@@ -1,5 +1,5 @@
 body {
-  background-color: antiquewhite;
+  background-color: white;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
 }
@@ -110,11 +110,23 @@ body {
   box-shadow: 5px 5px 15px;
   animation: income 1s ease-in;
 }
+#todolist-head {
+  display: flex;
+  position: relative;
+}
 #todolist-title {
   padding-left: 20px;
   padding-top: 20px;
   font-weight: 600;
   font-size: 30px;
+}
+#search-date input {
+  position: absolute;
+  width: 50px;
+  right: 20px;
+  bottom: 5px;
+  background-color: #f9df9d;
+  border: none;
 }
 .todo-text {
   font-size: "20px";
