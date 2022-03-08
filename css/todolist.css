@@ -1,0 +1,42 @@
+.todo-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f9df9d;
+  width: 300px;
+  height: 500px;
+  margin-top: 100px;
+  box-shadow: 5px 5px 15px;
+  animation: income 1s ease-in;
+}
+#todolist-head {
+  display: flex;
+  position: relative;
+}
+#todolist-title {
+  padding-left: 20px;
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 30px;
+}
+#search-date input {
+  position: absolute;
+  width: 50px;
+  right: 20px;
+  bottom: 5px;
+  background-color: #f9df9d;
+  border: none;
+}
+.todo-text {
+  pointer-events: none;
+  font-size: "20px";
+  padding-right: "10px";
+  font-weight: "500";
+}
+#todo-list {
+  display: display;
+  padding-top: 10px;
+  border-top: 3px solid rgba(0, 0, 0, 1);
+  margin: 20px;
+  margin-top: 0;
+}
