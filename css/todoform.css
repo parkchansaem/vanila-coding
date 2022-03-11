@@ -1,0 +1,23 @@
+#todo-form {
+  position: absolute;
+
+  bottom: 20px;
+
+  padding: 10px;
+}
+#todo-form div {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#todo-form input {
+  background-color: #f9df9d;
+  width: 200px;
+  height: 40px;
+  margin-left: 10px;
+}
+#todo-form button {
+  background-color: #f9df9d;
+  width: 50px;
+  height: 45px;
+}
